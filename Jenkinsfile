@@ -11,8 +11,8 @@ pipeline {
     parameters{
         choice(
             choices: ['Dev', 'Prod'],
-            description: 'Select the target cluster',
-            name: 'TARGET CLUSTER'
+            description: 'Select the Target Environment',
+            name: 'TARGET_ENVIRONMENT'
             )
     }
     
