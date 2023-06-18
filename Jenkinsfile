@@ -28,7 +28,7 @@ pipeline {
             steps{
                 script{
                     sh 'echo password | sudo -S apt-get install pip -y'
-                    sh 'echo password | sudo -S pip install -r requirement.txt'
+                    sh 'echo password | sudo -S pip install -r requirements.txt'
                 }
 
             }
