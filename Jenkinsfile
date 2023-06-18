@@ -27,9 +27,8 @@ pipeline {
         stage("Install Packages"){
             steps{
                 script{
-                    sh 'sudo su'
-                    sh 'apt-get install pip'
-                    sh 'pip install -r requirement.txt'
+                    sh 'echo password | sudo -S apt-get install pip'
+                    sh 'echo password | sudo -S pip install -r requirement.txt'
                 }
 
             }
