@@ -51,7 +51,6 @@ pipeline {
                 def buildStatus = currentBuild.currentResult ?: 'UNKNOWN'
                 def color = buildStatus== 'SUCCESS' ? 'good' : 'danger'
 
-                step{
                 slackSend(
                     channel: '#devops-project',
                     color: color,
@@ -59,7 +58,6 @@ pipeline {
                     teamDomain: 'xaidv05',
                     tokenCredentialId: 'slack-cred'
                 )
-                }
                 }
             }
         }
