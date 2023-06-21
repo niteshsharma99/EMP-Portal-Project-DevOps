@@ -48,7 +48,7 @@ pipeline {
 
             sript{
 
-                steps{
+                step{
                 def buildStatus = currentBuild.currentResult ?: 'UNKNOWN'
                 def color = buildStatus== 'SUCCESS' ? 'good' : 'danger'
                 }
