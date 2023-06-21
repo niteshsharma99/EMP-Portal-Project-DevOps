@@ -48,10 +48,9 @@ pipeline {
 
             sript{
 
-                step{
                 def buildStatus = currentBuild.currentResult ?: 'UNKNOWN'
                 def color = buildStatus== 'SUCCESS' ? 'good' : 'danger'
-                }
+                
                 slackSend(
                     channel: '#devops-project',
                     color: color,
