@@ -41,6 +41,8 @@ pipeline {
             }
         }
 
+    }
+
         post{
             always{
                 sript{
@@ -57,5 +59,5 @@ pipeline {
                 }
             }
         }
-    }
+    
 }
