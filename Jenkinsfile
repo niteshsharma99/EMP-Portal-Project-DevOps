@@ -57,7 +57,7 @@ pipeline {
                     color: color,
                     message: "Build ${env.BUILD_NUMBER} ${buildStatus}: STAGE=${env.STAGE_NAME}",
                     teamDomain: 'xaidv05',
-                    tokenCredentialId: 'slackcred'
+                    tokenCredentialId: 'slack-cred'
                 )
                 }
                 }
