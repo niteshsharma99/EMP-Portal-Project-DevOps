@@ -43,9 +43,10 @@ pipeline {
 
     }
 
-        post{
-            always{
-                sript{
+    post{
+        always{
+
+            sript{
                 def buildStatus = currentBuild.currentResult ?: 'UNKNOWN'
                 def color = buildStatus== 'SUCCESS' ? 'good' : 'danger'
 
