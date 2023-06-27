@@ -50,10 +50,10 @@ pipeline {
                 def color = buildStatus == 'SUCCESS' ? 'good' : 'danger'
 
                 slackSend(
-                    channel: '#cicd',
+                    channel: '#cicd-pipeline',
                     color: color,
                     message: "Build ${env.BUILD_NUMBER} ${buildStatus}: Stage ${env.STAGE_NAME}",
-                    teamDomain: ' xaidv05',
+                    teamDomain: 'upes-h6n3152',
                     tokenCredentialId: 'Slack-cred'
                 )
             }
