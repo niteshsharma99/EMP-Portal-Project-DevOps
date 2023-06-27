@@ -43,23 +43,21 @@ pipeline {
 
     }
 
-    post{
-        always{
-
-            script{
-
+    post {
+        always {
+            script {
                 def buildStatus = currentBuild.currentResult ?: 'UNKNOWN'
-                def color = buildStatus== 'SUCCESS' ? 'good' : 'danger'
+                def color = buildStatus == 'SUCCESS' ? 'good' : 'danger'
 
                 slackSend(
                     channel: '#devops-project',
                     color: color,
-                    message: "Build ${env.BUILD_NUMBER} ${buildStatus}: STAGE=${env.STAGE_NAME}",
-                    teamDomain: 'xaidv05',
-                    tokenCredentialId: 'Slack-cred'
+                    message: "Build ${env.BUILD_NUMBER} ${buildStatus}: Stage ${env.STAGE_NAME}",
+                    teamDomain: 'jenkinsintegr-kfn1541',
+                    tokenCredentialId: 'slack-integration'
                 )
-                }
             }
         }
+    }
     
 }
