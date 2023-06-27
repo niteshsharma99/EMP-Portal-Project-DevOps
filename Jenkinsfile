@@ -53,8 +53,8 @@ pipeline {
                     channel: '#devops-project',
                     color: color,
                     message: "Build ${env.BUILD_NUMBER} ${buildStatus}: Stage ${env.STAGE_NAME}",
-                    teamDomain: 'jenkinsintegr-kfn1541',
-                    tokenCredentialId: 'slack-integration'
+                    teamDomain: ' xaidv05',
+                    tokenCredentialId: 'Slack-cred'
                 )
             }
         }
